@@ -162,3 +162,18 @@ Doctron is released under the Apache 2.0 license. See [LICENSE.txt](https://gith
 
 http://39.103.166.150:8080/convert/html2image?u=doctron&p=lampnick&url=https://www.cnblogs.com
 
+linux 编译：
+SET CGO_ENABLED=0   （windows 1）
+SET GOOS=linux
+SET GOARCH=amd64
+go build main.go
+配置文件名称 将conf/default.yaml 拷贝到根目录  .doctron.yaml
+
+A.安装google-chrome插件
+https://blog.csdn.net/libaineu2004/article/details/82821405
+B.解决linux centos google chrome浏览器 中文方块乱码 -安装中文系统支持，执行下面三个命令就可以解决：
+1 yum -y groupinstall "X Window System"
+2 yum -y groupinstall chinese-support (可选)
+3 yum -y groupinstall Fonts 
+C.示例
+
